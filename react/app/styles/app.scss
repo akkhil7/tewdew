@@ -2,47 +2,36 @@
 @import "neat/neat";
 @import "base/base";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Helvetica', 'Arial';
-}
-
-.issues {
-  width: 100%;
-  float: left;
-  padding: 1em;
-}
-
-.issue-box {
-  width: 100%;
-  float: left;
-  padding: 1em;
-  border: 1px solid #EEE;
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-
-  &:hover {
-    cursor: pointer;
-    background: #EEE;
-  }
-}
-
-.issue-sidebar {
-  width: 35%;
-  float: right;
-  position: fixed;
+  background-image: url('img/bg.jpg');
   height: 100%;
-  right: 0;
-  top: 0;
-  background: rgba(white, .95);
-  border-left: 1px solid #eee;
-  padding: 1em;
+  width: 100%;
 }
+
+.wrapper {
+  @include span-columns(12 of 12);
+}
+
+.login-container {
+  position: absolute;
+  top: 40%;
+  @include span-columns(3);
+  @include shift(4.5);
+  background-color: white;
+  border-radius: 5px;
+  border: #eaeaea 1px solid;
+  padding: 40px 0;
+
+  input {
+    @include span-columns(10);
+    @include shift(1);
+  }
+  input[type=submit] {
+    @include span-columns(6);
+    @include shift(3);
+
+  }
+}
+
+
