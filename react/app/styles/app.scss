@@ -1,0 +1,48 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "base/base";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica', 'Arial';
+}
+
+.issues {
+  width: 100%;
+  float: left;
+  padding: 1em;
+}
+
+.issue-box {
+  width: 100%;
+  float: left;
+  padding: 1em;
+  border: 1px solid #EEE;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: #EEE;
+  }
+}
+
+.issue-sidebar {
+  width: 35%;
+  float: right;
+  position: fixed;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: rgba(white, .95);
+  border-left: 1px solid #eee;
+  padding: 1em;
+}
