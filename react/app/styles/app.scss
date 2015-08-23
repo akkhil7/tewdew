@@ -4,17 +4,43 @@
 
 body {
   font-family: 'Helvetica', 'Arial';
+  margin: 0;
+  padding: 0;
+}
+
+.background-blur {
   background-image: url('img/bg.jpg');
-  height: 100%;
-  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: -5%;
+  top: -5%;
+  height: 120%;
+  width: 120%;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
 }
 
 .wrapper {
   @include span-columns(12 of 12);
 }
 
+h2 {
+  position: absolute;
+  z-index: 9999;
+  top: 25%;
+  @include span-columns(4);
+  @include shift(4);
+  color: white;
+  text-align: center;
+}
+
+
 .login-container {
   position: absolute;
+  z-index: 9999;
   top: 40%;
   @include span-columns(3);
   @include shift(4.5);
@@ -22,6 +48,7 @@ body {
   border-radius: 5px;
   border: #eaeaea 1px solid;
   padding: 40px 0;
+
 
   input {
     @include span-columns(10);

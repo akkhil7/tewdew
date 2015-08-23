@@ -53,13 +53,17 @@ class Login extends React.Component {
     if(this.state.isLoggedIn)
       var logout = <button onClick={this.logOut.bind(this)}> Logout </button>
     return (
-      <div className="login-container">
-        <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" placeholder="enter username" ref="user" />
-          <input type="password" placeholder="enter password" ref="pass" />
-          <input type="submit" />
-        </form>
-        {logout}
+      <div>
+        <div className="background-blur"> </div>
+          <h2 className="login-text"> Login </h2>                
+        <div className="login-container">
+          <form onSubmit={this.handleSubmit.bind(this)}>
+            <input type="text" placeholder="enter username" ref="user" />
+            <input type="password" placeholder="enter password" ref="pass" />
+            <input type="submit" />
+          </form>
+          {logout}
+        </div>
       </div>
     );
   }
