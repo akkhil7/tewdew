@@ -1,0 +1,15 @@
+%h1="Todoo Lists"
+%h2="TODOO"
+
+-@todos.each do |t| 
+      %strong=t.name
+      %small= link_to  "Mark as done",  todoo_path(t),  :method => :put 
+      %br
+      %br
+%h2="TODONE"
+-@todone.each do |t|
+      %strong=t.name
+      %small=link_to "Remove item", todoo_path(t), :method => :delete
+      %br
+      %br
+%strong= link_to "Add new todoo", new_todoo_path
