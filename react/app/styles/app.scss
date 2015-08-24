@@ -1,6 +1,8 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "base/base";
+@import "font-awesome/scss/font-awesome.scss";
+
 
 body {
   font-family: 'Helvetica', 'Arial';
@@ -57,7 +59,6 @@ h2 {
   input[type=submit] {
     @include span-columns(6);
     @include shift(3);
-
   }
 }
 

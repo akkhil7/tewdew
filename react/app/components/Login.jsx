@@ -55,16 +55,22 @@ class Login extends React.Component {
     return (
       <div>
         <div className="background-blur"> </div>
-          <h2 className="login-text"> Login </h2>                
+        <h2 className="login-text"> Login </h2>                
         <div className="login-container">
           <form onSubmit={this.handleSubmit.bind(this)}>
-            <input type="text" placeholder="enter username" ref="user" />
-            <input type="password" placeholder="enter password" ref="pass" />
-            <input type="submit" />
-          </form>
-          {logout}
-        </div>
-      </div>
+            <div className="input-group margin-bottom-sm">
+              <span className="input-group-addon"><i className="fa fa-envelope-o fa-fw"></i></span>
+              <input className="form-control" type="text" placeholder="Username" />
+              </div>
+              <div className="input-group">
+                <span className="input-group-addon"><i className="fa fa-key fa-fw"></i></span>
+                <input className="form-control" type="password" placeholder="Password" />
+                </div>    
+                <input type="submit" />
+              </form>
+              {logout}
+            </div>
+          </div>
     );
   }
 }

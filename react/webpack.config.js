@@ -21,7 +21,7 @@ module.exports = {
       exclude: /(node_modules|bower_components)/,
       loaders: ['react-hot', 'babel'],
     }, {
-      test: /\.scss$/,
+      test: /\.(scss|sass)$/,
       loader: "style!css!sass"
     }, {
       test: /\.(jpe?g|png|gif|svg)$/i,
