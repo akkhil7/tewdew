@@ -21,6 +21,8 @@
     "babel-loader": "^5.3.2",
     "css-loader": "^0.15.6",
     "file-loader": "^0.8.4",
+    "font-awesome": "^4.4.0",
+    "font-awesome-webpack": "0.0.3",
     "html-loader": "^0.3.0",
     "image-webpack-loader": "^1.6.1",
     "imagemin": "^3.2.0",

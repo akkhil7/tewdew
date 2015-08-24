@@ -1,13 +1,17 @@
-@import "bourbon/bourbon";
-@import "neat/neat";
-@import "base/base";
-@import "font-awesome/scss/font-awesome.scss";
+@import "bourbon/bourbon.scss";
+@import "neat/neat.scss";
+@import "base/base.scss";
+@import "partials/login.sass";
 
 
 body {
   font-family: 'Helvetica', 'Arial';
   margin: 0;
   padding: 0;
+}
+
+.wrapper {
+  @include span-columns(12 of 12);
 }
 
 .background-blur {
@@ -25,41 +29,90 @@ body {
   filter: blur(10px);
 }
 
-.wrapper {
-  @include span-columns(12 of 12);
+.login-handler {
+  position: fixed;
+  z-index: 9999;
+  top: 30%;
+  @include span-columns(6);
+  @include shift(3);
+
+  span {
+    margin-top: 10px;
+    color: white;
+    font-style: italic;
+    font-family: "Georgia";
+    @include span-columns(12);
+    text-align: center;
+  }
+  button {
+    @include span-columns(6);
+    @include shift(3);
+    margin-top: 10px;
+  }
+
+  button:hover {
+    -webkit-filter: brightness(95%);
+  }
+
+  .register-button {
+    background-color: #5cc34f;
+  }
+
+  .login-button {
+    background-color: #218ff6;
+  }
+
 }
 
-h2 {
-  position: absolute;
-  z-index: 9999;
-  top: 25%;
-  @include span-columns(4);
-  @include shift(4);
-  color: white;
+.form-text {
+  @include span-columns(12);
   text-align: center;
+  @include omega();
+  color: white;
 }
 
+hr {
+  margin-top: 10px;
+  @include span-columns(10);
+  @include shift(1);
+}
 
-.login-container {
+.form-container {
   position: absolute;
   z-index: 9999;
-  top: 40%;
+  top: 20%;
   @include span-columns(3);
   @include shift(4.5);
-  background-color: white;
+  background-color: rgba(0,0,0,0.1);
   border-radius: 5px;
-  border: #eaeaea 1px solid;
+  border: #333 1px solid;
   padding: 40px 0;
 
-
-  input {
+   input {
     @include span-columns(10);
+    background-color: rgba(0,0,0,0.1);
     @include shift(1);
+    border-color: #333;
   }
+
+  input:hover {
+    border-color: inherit;
+  }
+  input:focus {
+    border-color: #16a5ff;
+    color: white;
+    transition: border-color 500ms ease-out;
+  }
+
   input[type=submit] {
+    margin-top: 20px;
+    background-color: #fdab36;
     @include span-columns(6);
     @include shift(3);
   }
+
+  input[type=submit]:hover {
+    background-color: #c99021;
+    transition: background-color 200ms ease-in;
+  }
 }
-
-

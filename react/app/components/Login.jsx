@@ -50,27 +50,19 @@ class Login extends React.Component {
     })
   }
   render () {
-    if(this.state.isLoggedIn)
-      var logout = <button onClick={this.logOut.bind(this)}> Logout </button>
     return (
       <div>
         <div className="background-blur"> </div>
-        <h2 className="login-text"> Login </h2>                
-        <div className="login-container">
+        <div className="form-container">
+          <h2 className='form-text'> Login </h2>
+          <hr />
           <form onSubmit={this.handleSubmit.bind(this)}>
-            <div className="input-group margin-bottom-sm">
-              <span className="input-group-addon"><i className="fa fa-envelope-o fa-fw"></i></span>
-              <input className="form-control" type="text" placeholder="Username" />
-              </div>
-              <div className="input-group">
-                <span className="input-group-addon"><i className="fa fa-key fa-fw"></i></span>
-                <input className="form-control" type="password" placeholder="Password" />
-                </div>    
-                <input type="submit" />
-              </form>
-              {logout}
-            </div>
-          </div>
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <input type="submit" value="Login" />
+          </form>
+        </div>
+      </div>
     );
   }
 }
