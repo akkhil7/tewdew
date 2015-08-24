@@ -1,4 +1,7 @@
 class TodooController < ApplicationController
+
+  before_action :authenticate
+
   def index
     @todos=Todo.where(done: false)
     @todone=Todo.where(done: true)
