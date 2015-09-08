@@ -2,117 +2,28 @@
 @import "neat/neat.scss";
 @import "base/base.scss";
 @import "partials/login.sass";
+@import "partials/dashboard.sass";
+@import "partials/todoo.sass";
 
+html {
+  height: 100%;
+}
 
 body {
+  height: 100%;
   font-family: 'Helvetica', 'Arial';
   margin: 0;
   padding: 0;
 }
 
 .wrapper {
+  height: 100%;
+  background: -webkit-linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* W3C */
   @include span-columns(12 of 12);
 }
 
-.background-blur {
-  background-image: url('img/bg.jpg');
-  position: fixed;
-  z-index: 1;
-  left: -5%;
-  top: -5%;
-  height: 120%;
-  width: 120%;
-  -webkit-filter: blur(10px);
-  -moz-filter: blur(10px);
-  -o-filter: blur(10px);
-  -ms-filter: blur(10px);
-  filter: blur(10px);
-}
 
-.login-handler {
-  position: fixed;
-  z-index: 9999;
-  top: 30%;
-  @include span-columns(6);
-  @include shift(3);
-
-  span {
-    margin-top: 10px;
-    color: white;
-    font-style: italic;
-    font-family: "Georgia";
-    @include span-columns(12);
-    text-align: center;
-  }
-  button {
-    @include span-columns(6);
-    @include shift(3);
-    margin-top: 10px;
-  }
-
-  button:hover {
-    -webkit-filter: brightness(95%);
-  }
-
-  .register-button {
-    background-color: #5cc34f;
-  }
-
-  .login-button {
-    background-color: #218ff6;
-  }
-
-}
-
-.form-text {
-  @include span-columns(12);
-  text-align: center;
-  @include omega();
-  color: white;
-}
-
-hr {
-  margin-top: 10px;
-  @include span-columns(10);
-  @include shift(1);
-}
-
-.form-container {
-  position: absolute;
-  z-index: 9999;
-  top: 20%;
-  @include span-columns(3);
-  @include shift(4.5);
-  background-color: rgba(0,0,0,0.1);
-  border-radius: 5px;
-  border: #333 1px solid;
-  padding: 40px 0;
-
-   input {
-    @include span-columns(10);
-    background-color: rgba(0,0,0,0.1);
-    @include shift(1);
-    border-color: #333;
-  }
-
-  input:hover {
-    border-color: inherit;
-  }
-  input:focus {
-    border-color: #16a5ff;
-    color: white;
-    transition: border-color 500ms ease-out;
-  }
-
-  input[type=submit] {
-    margin-top: 20px;
-    background-color: #fdab36;
-    @include span-columns(6);
-    @include shift(3);
-  }
-
-  input[type=submit]:hover {
-    background-color: #c99021;
-    transition: background-color 200ms ease-in;
-  }
-}

@@ -3,10 +3,8 @@ class TodooController < ApplicationController
   before_action :authenticate
 
   def index
-    @todos=Todo.where(done: false)
-    @todone=Todo.where(done: true)
-    render json: todos
-    render json: todone
+    @todos = current_user.todos
+    render json:{todos: @todos}, status: 200
   end
 
   def new
@@ -35,12 +33,11 @@ class TodooController < ApplicationController
   def destroy
     @todo=Todo.find(params[:id])
     @todo.destroy
-    render text: "The todo was destroyed", status: 200
   end
 
   private
   def todo_params
-    params.require(:todo).permit(:name, :done)
+    params.require(:todo).permit(:name, :done, :user_id)
   end
 
 end

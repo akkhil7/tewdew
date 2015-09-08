@@ -9,8 +9,11 @@ class TokensController < ApplicationController
     end
   end
 
-  private
-  def auth_params
-    params.require(:user).permit(:username, :password)
+  def verify_token
+      @user = User.find_by(access_token: params[:token])
+      if @user
+        render json: {user: @user}, status: 200
+      end
   end
+
 end

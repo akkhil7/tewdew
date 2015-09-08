@@ -34,10 +34,13 @@ class Login extends React.Component {
       console.log(res);
       let response = JSON.parse(res.text)
       const token  = response.token
-      _this.setState({
-        isLoggedIn: true
-      })
-      window.localStorage.token = token
+      if(res.status == 200) {
+        _this.setState({
+          isLoggedIn: true
+        }) 
+        this.context.router.transitionTo('dashboard')
+        localStorage.token = token
+      }
     })
   }
 
@@ -65,6 +68,10 @@ class Login extends React.Component {
       </div>
     );
   }
+}
+
+Login.contextTypes = {
+  router: React.PropTypes.func.isRequired
 }
 
 module.exports = Login;
