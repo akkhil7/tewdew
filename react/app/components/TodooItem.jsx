@@ -21,7 +21,7 @@ class TodooItem extends React.Component{
       <div>
       <Spring defaultValue={{val: 0}} endValue={{val:200, config: [120,17]}}>
       {interpolated =>
-        <div className="todoo-item" style={{transform: 'translate3d(${interpolated.val}px, 0, 0)'}}>
+        <div className="todoo-item" style={{margin: '${interpolated.val}px 0 0 0'}}>
         <p>{title}</p>
         </div>
       }

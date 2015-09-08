@@ -5,7 +5,8 @@ import Router from 'react-router';
 import Request from 'superagent';
 import { RouteHandler } from 'react-router';
 import _ from 'lodash';
-import TodooItem from './TodooItem.jsx'
+import TodooItem from './TodooItem.jsx';
+import { Spring } from 'react-motion';
 
 class DashBoard extends React.Component{
 
@@ -95,7 +96,14 @@ class DashBoard extends React.Component{
           <input type="text" placeholder="enter todoo" ref="todoo" className="todoo-box" />
           <input type="submit" className="todoo-submit"  />
         </form>
-        {TodooItems}
+        <Spring defaultValue={{val: 0}} endValue={{val: 200}}>
+          {interpolated =>
+            <div className='todoo-list' style={{margin: '${interpolated.val}px 0 0 0'}}>
+              {TodooItems}
+            </div>
+          }
+        </Spring>
+
       </div>
     );
   }
