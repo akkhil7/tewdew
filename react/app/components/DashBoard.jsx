@@ -38,7 +38,8 @@ class DashBoard extends React.Component{
         if (res.status != 200)
           this.context.router.transitionTo('login');
         else if(res.status == 200) {
-          Request.get("http://localhost:3000/todoo/")
+          Request
+          .get("http://localhost:3000/todoo/")
           .set('Authorization', 'Token token=' + localStorage.token)
           .end((err,res) => {
             console.log(res);
@@ -48,6 +49,7 @@ class DashBoard extends React.Component{
         }
       })
     }
+
     else
       this.context.router.transitionTo('login');
   }
@@ -91,18 +93,17 @@ class DashBoard extends React.Component{
       <div className="dashboard">
         <h1> Todoo App </h1>
         <span>Welcome Akhil</span>
-        <a className='logout' href="#" onClick={this.logOut.bind(this)}> Logout </a>
+        <a className='logout' href="#" 
+          onClick={this.logOut.bind(this)}>
+          Logout </a>
         <form onSubmit={this.handleSubmit.bind(this)}>
-          <input type="text" placeholder="enter todoo" ref="todoo" className="todoo-box" />
+          <input type="text" placeholder="enter todoo"
+            ref="todoo" className="todoo-box" />
           <input type="submit" className="todoo-submit"  />
         </form>
-        <Spring defaultValue={{val: 0}} endValue={{val: 200}}>
-          {interpolated =>
-            <div className='todoo-list' style={{margin: '${interpolated.val}px 0 0 0'}}>
-              {TodooItems}
-            </div>
-          }
-        </Spring>
+        <div className='todoo-list'>
+          {TodooItems}
+        </div>
 
       </div>
     );

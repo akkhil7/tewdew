@@ -5,9 +5,28 @@
 .todoo-item
   +span-columns(12)
   background-color: #ffffff
+  position: relative
   color: #ababab
-  padding: 15px 10px 0 10px
-  min-height: 40px
+  margin-top: 15px
+  padding: 20px 10px 0 10px
+  min-height: 50px
 
   p
-    line-height: 0.8
+    +span-columns(10)
+
+  button
+    +span-columns(2)
+    +omega()
+    min-height: 56px
+    border-radius: 0px
+    position: absolute
+    right:0
+    top: 0
+
+.done
+  background-color: #f9f6ce
+  color: #24597a
+  
+  p
+    text-decoration: line-through
+
