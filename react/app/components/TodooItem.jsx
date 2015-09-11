@@ -17,16 +17,35 @@ class TodooItem extends React.Component{
   }
   
   toggleState() {
-    alert("wow")
-  }
+    var todo = this.props.todo
+    todo.done = !todo.done
+    let _this = this
+    Request
+      .put("http://localhost:3000/todoo/")
+      .set('Access-Control-Allow-Origin', '*')
+      .set('Authorization', 'Token token=' + localStorage.token)
+      .send({todo:todo})
+      .end((err,res) => {
+        console.log(res)
+        Request
+          .get("http://localhost:3000/todoo/")
+          .set('Authorization', 'Token token=' + localStorage.token)
+          .end((err,res) => {
+            const response = JSON.parse(res.text).todos
+            _this.setState({todos:response})
+        })
+    })
+}
   render () {
     if(!_.isEmpty(this.props.todo)) {
       var todo = this.props.todo
       var title = todo.name
-      if(!todo.done)
+      if(todo.done)
         var todooClass = "todoo-item done"
       else
         var todooClass = "todoo-item"
+
+      var completed = todo.done ? "complete" : "incomplete"
     }
     return (
       <div>
@@ -35,9 +54,9 @@ class TodooItem extends React.Component{
         return (
           <div className={todooClass} 
             style={{transform: 'translateY(' + interpolated.val + 'px)',
-          }}>
+            }}>
+          <button className={completed} onClick={this.toggleState.bind(this)}> W </button>            
           <p onChange={this.handleChange.bind(this)}>{title}</p>
-          <button onClick={this.toggleState.bind(this)}> W </button>
         </div>
         )
       }}
