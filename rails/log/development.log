@@ -11779,3 +11779,895 @@ Processing by TodooController#index as */*
   [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
   [1m[36mTodo Load (0.3ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
 Completed 200 OK in 27ms (Views: 9.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 10:50:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+Completed 200 OK in 56ms (Views: 15.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:50:13 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (2.4ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 67ms (Views: 24.7ms | ActiveRecord: 3.4ms)
+
+
+Started PUT "/todoo/" for 127.0.0.1 at 2015-09-12 10:50:14 +0530
+
+ActionController::RoutingError (No route matches [PUT] "/todoo"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.3ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (60.9ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:50:14 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.3ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/todoo/" for 127.0.0.1 at 2015-09-12 10:50:20 +0530
+
+ActionController::RoutingError (No route matches [PUT] "/todoo"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (23.8ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:50:20 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.4ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/todoo" for 127.0.0.1 at 2015-09-12 10:50:29 +0530
+Processing by TodooController#index as HTML
+  Rendered text template (0.0ms)
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 10:50:42 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:50:42 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.5ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/todoo/" for 127.0.0.1 at 2015-09-12 10:50:50 +0530
+
+ActionController::RoutingError (No route matches [PUT] "/todoo"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.9ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:50:50 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 10:53:08 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+Completed 200 OK in 41ms (Views: 25.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:53:08 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.6ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 24ms (Views: 9.8ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/todoo/" for 127.0.0.1 at 2015-09-12 10:53:09 +0530
+
+ActionController::RoutingError (No route matches [PUT] "/todoo"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.8ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.1ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:53:09 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 10:53:52 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 18.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:53:53 +0530
+
+ActionController::RoutingError (No route matches [GET] "/todoo"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.0ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (62.2ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 10:53:56 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:53:56 +0530
+
+ActionController::RoutingError (No route matches [GET] "/todoo"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (54.9ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 10:54:02 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:54:02 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (1.0ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 19ms (Views: 11.8ms | ActiveRecord: 2.2ms)
+
+
+Started PUT "/todoo/" for 127.0.0.1 at 2015-09-12 10:54:05 +0530
+
+ActionController::RoutingError (No route matches [PUT] "/todoo"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.7ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:54:05 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (1.0ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 1.4ms)
+
+
+Started PUT "/todoo/" for 127.0.0.1 at 2015-09-12 10:54:12 +0530
+
+ActionController::RoutingError (No route matches [PUT] "/todoo"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.7ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 10:54:12 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.3ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 11:40:19 +0530
+
+SyntaxError (/Users/Akhil/Sites/todoo/rails/config/routes.rb:7: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  put 'todoo/1' to: 'todoo:update'
+                  ^):
+  activesupport (4.1.1) lib/active_support/dependencies.rb:241:in `load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:241:in `block in load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:232:in `load_dependency'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:241:in `load'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.1.1) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.1.1) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.1.1) lib/rails/application/finisher.rb:83:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:438:in `instance_exec'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:438:in `block in make_lambda'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:184:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:184:in `block in simple'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `block in simple'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `block in simple'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `block in simple'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:83:in `prepare!'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:71:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.8ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.1ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 11:40:36 +0530
+
+SyntaxError (/Users/Akhil/Sites/todoo/rails/config/routes.rb:7: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  put 'todoo/1' to: 'todoo#update'
+                  ^):
+  activesupport (4.1.1) lib/active_support/dependencies.rb:241:in `load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:241:in `block in load'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:232:in `load_dependency'
+  activesupport (4.1.1) lib/active_support/dependencies.rb:241:in `load'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.1.1) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.1.1) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.1.1) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.1.1) lib/rails/application/finisher.rb:83:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:438:in `instance_exec'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:438:in `block in make_lambda'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:184:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:184:in `block in simple'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `block in simple'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `block in simple'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:185:in `block in simple'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:83:in `prepare!'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:71:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.8ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 11:40:38 +0530
+
+ActionController::RoutingError (No route matches [POST] "/tokens/verify_token"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.6ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.3ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 11:41:22 +0530
+
+ActionController::RoutingError (No route matches [POST] "/tokens/verify_token"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack-cors (0.2.9) lib/rack/cors.rb:54:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Akhil/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.0ms)
+  Rendered /Users/Akhil/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (42.5ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 11:41:30 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+Completed 200 OK in 39ms (Views: 22.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 11:41:31 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.9ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 28ms (Views: 12.0ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/todoo/93" for 127.0.0.1 at 2015-09-12 11:41:33 +0530
+Processing by TodooController#update as */*
+  Parameters: {"todo"=>{"id"=>93, "name"=>"First Todoo", "done"=>true, "created_at"=>"2015-09-09T19:32:56.455Z", "updated_at"=>"2015-09-09T19:32:56.455Z", "user_id"=>1}, "id"=>"93", "todoo"=>{"todo"=>{"id"=>93, "name"=>"First Todoo", "done"=>true, "created_at"=>"2015-09-09T19:32:56.455Z", "updated_at"=>"2015-09-09T19:32:56.455Z", "user_id"=>1}}}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.3ms)[0m  SELECT  "todos".* FROM "todos"  WHERE "todos"."id" = ? LIMIT 1  [["id", 93]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE "todos" SET "done" = ?, "updated_at" = ? WHERE "todos"."id" = 93  [["done", "t"], ["updated_at", "2015-09-12 06:11:33.325610"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 32ms (Views: 0.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 11:41:33 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.3ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/todoo/93" for 127.0.0.1 at 2015-09-12 11:41:51 +0530
+Processing by TodooController#update as */*
+  Parameters: {"todo"=>{"id"=>93, "name"=>"First Todoo", "done"=>false, "created_at"=>"2015-09-09T19:32:56.455Z", "updated_at"=>"2015-09-09T19:32:56.455Z", "user_id"=>1}, "id"=>"93", "todoo"=>{"todo"=>{"id"=>93, "name"=>"First Todoo", "done"=>false, "created_at"=>"2015-09-09T19:32:56.455Z", "updated_at"=>"2015-09-09T19:32:56.455Z", "user_id"=>1}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT  "todos".* FROM "todos"  WHERE "todos"."id" = ? LIMIT 1[0m  [["id", 93]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "todos" SET "done" = ?, "updated_at" = ? WHERE "todos"."id" = 93[0m  [["done", "f"], ["updated_at", "2015-09-12 06:11:51.206501"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 11:41:51 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 15:47:41 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+Completed 200 OK in 30ms (Views: 6.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 15:47:41 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.3ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 157ms (Views: 152.8ms | ActiveRecord: 0.5ms)
+  [1m[36mTodo Load (10.9ms)[0m  [1mSELECT "todos".* FROM "todos"[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mDELETE FROM "todos" WHERE "todos"."id" = ?[0m  [["id", 93]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  DELETE FROM "todos" WHERE "todos"."id" = ?  [["id", 94]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "todos" WHERE "todos"."id" = ?[0m  [["id", 95]]
+  [1m[35m (5.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "todos" WHERE "todos"."id" = ?  [["id", 96]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "todos" WHERE "todos"."id" = ?[0m  [["id", 97]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "todos" WHERE "todos"."id" = ?  [["id", 98]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "todos" WHERE "todos"."id" = ?[0m  [["id", 99]]
+  [1m[35m (5.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "todos" WHERE "todos"."id" = ?  [["id", 100]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "todos" WHERE "todos"."id" = ?[0m  [["id", 101]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "todos" WHERE "todos"."id" = ?  [["id", 102]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 15:47:56 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[35mUser Load (3.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 15:47:56 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 15:47:58 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 15:47:58 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/todoo/" for 127.0.0.1 at 2015-09-12 15:48:04 +0530
+Processing by TodooController#create as */*
+  Parameters: {"todo"=>{"name"=>"one more", "done"=>false, "user_id"=>1}, "todoo"=>{"todo"=>{"name"=>"one more", "done"=>false, "user_id"=>1}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "todos" ("created_at", "done", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-12 10:18:04.367811"], ["done", "f"], ["name", "one more"], ["updated_at", "2015-09-12 10:18:04.367811"], ["user_id", 1]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 24ms (Views: 0.5ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/todoo/" for 127.0.0.1 at 2015-09-12 15:48:06 +0530
+Processing by TodooController#create as */*
+  Parameters: {"todo"=>{"name"=>"another", "done"=>false, "user_id"=>1}, "todoo"=>{"todo"=>{"name"=>"another", "done"=>false, "user_id"=>1}}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "todos" ("created_at", "done", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-12 10:18:06.671842"], ["done", "f"], ["name", "another"], ["updated_at", "2015-09-12 10:18:06.671842"], ["user_id", 1]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/todoo/103" for 127.0.0.1 at 2015-09-12 15:48:09 +0530
+Processing by TodooController#update as */*
+  Parameters: {"todo"=>{"id"=>103, "name"=>"one more", "done"=>true, "created_at"=>"2015-09-12T10:18:04.367Z", "updated_at"=>"2015-09-12T10:18:04.367Z", "user_id"=>1}, "id"=>"103", "todoo"=>{"todo"=>{"id"=>103, "name"=>"one more", "done"=>true, "created_at"=>"2015-09-12T10:18:04.367Z", "updated_at"=>"2015-09-12T10:18:04.367Z", "user_id"=>1}}}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT  "todos".* FROM "todos"  WHERE "todos"."id" = ? LIMIT 1[0m  [["id", 103]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "todos" SET "done" = ?, "updated_at" = ? WHERE "todos"."id" = 103[0m  [["done", "t"], ["updated_at", "2015-09-12 10:18:09.658186"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 15:48:09 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/todoo/104" for 127.0.0.1 at 2015-09-12 15:48:14 +0530
+Processing by TodooController#update as */*
+  Parameters: {"todo"=>{"id"=>104, "name"=>"another", "done"=>true, "created_at"=>"2015-09-12T10:18:06.671Z", "updated_at"=>"2015-09-12T10:18:06.671Z", "user_id"=>1}, "id"=>"104", "todoo"=>{"todo"=>{"id"=>104, "name"=>"another", "done"=>true, "created_at"=>"2015-09-12T10:18:06.671Z", "updated_at"=>"2015-09-12T10:18:06.671Z", "user_id"=>1}}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.1ms)[0m  SELECT  "todos".* FROM "todos"  WHERE "todos"."id" = ? LIMIT 1  [["id", 104]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "todos" SET "done" = ?, "updated_at" = ? WHERE "todos"."id" = 104  [["done", "t"], ["updated_at", "2015-09-12 10:18:14.455563"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 15:48:14 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started PUT "/todoo/103" for 127.0.0.1 at 2015-09-12 15:48:20 +0530
+Processing by TodooController#update as */*
+  Parameters: {"todo"=>{"id"=>103, "name"=>"one more", "done"=>false, "created_at"=>"2015-09-12T10:18:04.367Z", "updated_at"=>"2015-09-12T10:18:04.367Z", "user_id"=>1}, "id"=>"103", "todoo"=>{"todo"=>{"id"=>103, "name"=>"one more", "done"=>false, "created_at"=>"2015-09-12T10:18:04.367Z", "updated_at"=>"2015-09-12T10:18:04.367Z", "user_id"=>1}}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT  "todos".* FROM "todos"  WHERE "todos"."id" = ? LIMIT 1[0m  [["id", 103]]
+Unpermitted parameters: id, created_at, updated_at
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "todos" SET "done" = ?, "updated_at" = ? WHERE "todos"."id" = 103[0m  [["done", "f"], ["updated_at", "2015-09-12 10:18:20.562130"]]
+  [1m[35m (8.6ms)[0m  commit transaction
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 15:48:20 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 16:09:11 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+Completed 200 OK in 21ms (Views: 4.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 16:09:11 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.2ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 16:09:13 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 16:09:13 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.1ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 16:09:24 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 16:09:24 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.1ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 16:09:32 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 16:09:32 +0530
+Processing by TodooController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+  [1m[35mTodo Load (0.2ms)[0m  SELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/tokens/verify_token" for 127.0.0.1 at 2015-09-12 16:09:56 +0530
+Processing by TokensController#verify_token as */*
+  Parameters: {"token"=>"9240e72825114419ab8cc38e64c7d571"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1[0m
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todoo/" for 127.0.0.1 at 2015-09-12 16:09:56 +0530
+Processing by TodooController#index as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36mTodo Load (0.2ms)[0m  [1mSELECT "todos".* FROM "todos"  WHERE "todos"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/todoo/" for 127.0.0.1 at 2015-09-12 16:20:34 +0530
+Processing by TodooController#create as */*
+  Parameters: {"todo"=>{"name"=>"wowiez", "done"=>false, "user_id"=>1}, "todoo"=>{"todo"=>{"name"=>"wowiez", "done"=>false, "user_id"=>1}}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."access_token" = '9240e72825114419ab8cc38e64c7d571' LIMIT 1
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "todos" ("created_at", "done", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)  [["created_at", "2015-09-12 10:50:34.616524"], ["done", "f"], ["name", "wowiez"], ["updated_at", "2015-09-12 10:50:34.616524"], ["user_id", 1]]
+  [1m[36m (5.8ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 38ms (Views: 3.1ms | ActiveRecord: 8.4ms)

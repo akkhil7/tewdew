@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   root :to => "home#index"
   resources :todoo
   resources :users
-
   resources :tokens do
     collection do
       post :verify

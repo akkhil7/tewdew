@@ -21,8 +21,7 @@ class TodooItem extends React.Component{
     todo.done = !todo.done
     let _this = this
     Request
-      .put("http://localhost:3000/todoo/")
-      .set('Access-Control-Allow-Origin', '*')
+      .put("http://localhost:3000/todoo/"+todo.id)
       .set('Authorization', 'Token token=' + localStorage.token)
       .send({todo:todo})
       .end((err,res) => {

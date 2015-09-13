@@ -6,18 +6,18 @@
 @import "partials/todoo.sass";
 
 html {
-  min-height: 100%;
+  height: 100%;
 }
 
 body {
-  min-height: 100%;
+  height: 100%;
   font-family: 'Helvetica', 'Arial';
   margin: 0;
   padding: 0;
 }
 
 .wrapper {
-  min-height: 100%;
+  height: 100%;
   overflow: auto;
   background: -webkit-linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* FF3.6+ */

@@ -23,7 +23,7 @@ class TodooController < ApplicationController
   def update
     @todo=Todo.find(params[:id])
 
-    if @todo.update_attribute(todo_params)
+    if @todo.update_attributes(todo_params)
       render json: @todo, status: 200
     else
       render json: @todo.errors, status: 422
