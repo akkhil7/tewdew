@@ -1,0 +1,81 @@
+.background-blur
+  background-image: url("img/bg.jpg")
+  position: fixed
+  z-index: 1
+  left: -5%
+  top: -5%
+  height: 120%
+  width: 120%
+  -webkit-filter: blur(10px)
+  -moz-filter: blur(10px)
+  -o-filter: blur(10px)
+  -ms-filter: blur(10px)
+  filter: blur(10px)
+
+.login-handler
+  position: fixed
+  z-index: 9999
+  top: 30%
+  +span-columns(6)
+  +shift(3)
+  span
+    margin-top: 10px
+    color: white
+    font-style: italic
+    font-family: "Georgia"
+    +span-columns(12)
+    text-align: center
+  button
+    +span-columns(6)
+    +shift(3)
+    margin-top: 10px
+  button:hover
+    -webkit-filter: brightness(95%)
+  .register-button
+    background-color: #5cc34f
+  .login-button
+    background-color: #218ff6
+
+.form-text
+  +span-columns(12)
+  text-align: center
+  +omega
+  color: white
+
+hr
+  margin-top: 10px
+  +span-columns(10)
+  +shift(1)
+
+.form-container
+  position: absolute
+  z-index: 9999
+  top: 20%
+  +span-columns(3)
+  +shift(4.5)
+  background-color: rgba(0, 0, 0, 0.1)
+  border-radius: 5px
+  border: #333 1px solid
+  padding: 40px 0
+  input
+    +span-columns(10)
+    background-color: rgba(0, 0, 0, 0.1)
+    +shift(1)
+    border-color: #333
+    color: #d6d6d6
+  input:hover
+    border-color: #333
+  input:focus
+    border-color: #16a5ff
+    color: white
+    transition: border-color 500ms ease-out
+  input[type=submit]
+    margin-top: 20px
+    color: white
+    background-color: #fdab36
+    +span-columns(6)
+    +shift(3)
+  input[type=submit]:hover
+    background-color: #c99021
+    transition: background-color 200ms ease-in
+

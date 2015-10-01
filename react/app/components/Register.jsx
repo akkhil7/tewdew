@@ -29,7 +29,7 @@ class Register extends React.Component{
       email: email
     }
 
-    Request.post("http://localhost:3000/users")
+    Request.post("https://arcane-citadel-2839.herokuapp.com/users")
     .send({user:user})
     .end((err,res) => {
       console.log(res);

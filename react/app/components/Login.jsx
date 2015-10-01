@@ -28,7 +28,7 @@ class Login extends React.Component {
     console.log(user);
     e.preventDefault();
     var _this = this
-    Request.post("http://localhost:3000/tokens/verify")
+    Request.post("https://arcane-citadel-2839.herokuapp.com/tokens/verify")
     .send({user:user})
     .end((err,res) => {
       console.log(res);

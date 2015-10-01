@@ -1,0 +1,48 @@
+.todoo-box
+  margin-top: 20px
+  margin-bottom: 0
+
+.todoo-item
+  +span-columns(12)
+  background-color: #ffffff
+  position: relative
+  color: #ababab
+  margin-top: 15px
+  padding: 18px 10px 0 10px
+  min-height: 60px
+
+  p
+    +span-columns(10)
+    +shift(2)
+    +omega()
+    font-family: ".HelveticaNeueDeskInterface-Regular"
+    font-weight: bold
+
+  button
+    +span-columns(2)
+    min-height: 60px
+    border-radius: 0px
+    position: absolute
+    top: 0
+    left: 0
+
+  button:hover
+    width: 100%
+    transition: width 500ms ease-out
+    opacity: 0.8
+
+  .incomplete
+    background-color: #fdac4b
+
+  .complete
+    background-color: #7dde76
+
+    
+
+.done
+  background-color: #f9f6ce
+  color: #91871c
+  
+  p
+    text-decoration: line-through
+

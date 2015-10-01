@@ -25,7 +25,7 @@ class DashBoard extends React.Component{
     console.log(localStorage)
     if (this.state.isLoggedIn) {
       Request
-      .post("http://localhost:3000/tokens/verify_token")
+      .post("https://arcane-citadel-2839.herokuapp.com/tokens/verify_token")
       .send({token: localStorage.token})
       .end((err,res) => {
         const user = JSON.parse(res.text).user
@@ -39,7 +39,7 @@ class DashBoard extends React.Component{
           this.context.router.transitionTo('login');
         else if(res.status == 200) {
           Request
-          .get("http://localhost:3000/todoo/")
+          .get("https://arcane-citadel-2839.herokuapp.com/todoo/")
           .set('Authorization', 'Token token=' + localStorage.token)
           .end((err,res) => {
             console.log(res);
@@ -71,7 +71,7 @@ class DashBoard extends React.Component{
       done: false,
       user_id: this.state.user.id
     }
-    Request.post("http://localhost:3000/todoo/")
+    Request.post("https://arcane-citadel-2839.herokuapp.com/todoo/")
     .set('Authorization', 'Token token=' + localStorage.token)
     .send({todo: todo})
     .end((err,res) => {

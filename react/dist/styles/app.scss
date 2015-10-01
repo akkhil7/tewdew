@@ -1,0 +1,30 @@
+@import "bourbon/bourbon.scss";
+@import "neat/neat.scss";
+@import "base/base.scss";
+@import "partials/login.sass";
+@import "partials/dashboard.sass";
+@import "partials/todoo.sass";
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'Helvetica', 'Arial';
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  height: 100%;
+  overflow: auto;
+  background: -webkit-linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #3D7EAA 10%, #FFE47A 90%); /* W3C */
+  @include span-columns(12 of 12);
+}
+
+

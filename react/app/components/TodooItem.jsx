@@ -21,13 +21,13 @@ class TodooItem extends React.Component{
     todo.done = !todo.done
     let _this = this
     Request
-      .put("http://localhost:3000/todoo/"+todo.id)
+      .put("https://arcane-citadel-2839.herokuapp.com/todoo/"+todo.id)
       .set('Authorization', 'Token token=' + localStorage.token)
       .send({todo:todo})
       .end((err,res) => {
         console.log(res)
         Request
-          .get("http://localhost:3000/todoo/")
+          .get("https://arcane-citadel-2839.herokuapp.com/todoo/")
           .set('Authorization', 'Token token=' + localStorage.token)
           .end((err,res) => {
             const response = JSON.parse(res.text).todos
